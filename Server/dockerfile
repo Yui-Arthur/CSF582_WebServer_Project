@@ -1,0 +1,9 @@
+FROM node:latest
+WORKDIR /usr/src/app
+COPY ./smart-farm-server/package*.json ./
+RUN npm install
+COPY ./smart-farm-server ./
+COPY ./wait-for-it.sh ./
+RUN chmod +x ./wait-for-it.sh
+ENTRYPOINT [ "./wait-for-it.sh" , "172.40.0.3:3306" , "--" ]
+CMD ["node" , "src/app.js" ]
