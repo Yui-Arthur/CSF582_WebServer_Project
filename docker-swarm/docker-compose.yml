@@ -32,9 +32,5 @@ services:
         - ./Nginx/nginx.conf:/etc/nginx/conf.d/default.conf
 
 networks:
-  linux_backend:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.40.0.0/16
+  linux_backendod:
+    external: True
