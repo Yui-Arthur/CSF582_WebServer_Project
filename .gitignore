@@ -1,2 +1,4 @@
-Server/smart-farm-server
-Nginx/view
+docker-compose/Server/smart-farm-server
+docker-compose/Nginx/view
+docker-swarm/Server/smart-farm-server
+docker-swarm/Nginx/view

@@ -25,6 +25,6 @@ sudo apt-get install -y vim
 # sudo mkdir /export/backup
 # sudo mkdir /export/cache
 # git
-sudo apt-get install git-all
+sudo apt-get install -y git-all
 
-sudo docker-compose up
+
