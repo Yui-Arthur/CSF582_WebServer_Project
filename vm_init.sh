@@ -10,10 +10,15 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install -y docker-compose
 sudo docker run hello-world
+
+
 # open ssh
-sudo apt install openssh-server
+sudo apt-get install -y openssh-server
 sudo ufw allow 22/tcp
+# vim
+sudo apt-get install -y vim
 # nfs-server
 # sudo apt install -y nfs-kernel-server
 # sudo mkdir /export
@@ -21,3 +26,10 @@ sudo ufw allow 22/tcp
 # sudo mkdir /export/cache
 # git
 sudo apt-get install git-all
+git clone https://github.com/Yui-Arthur/CSF582_WebServer_Project.git
+cd CSF582_WebServer_Project/Server
+git clone https://github.com/Sunny1928/smart-farm-server.git
+sudo cp -r ./smart-farm-server/view ../Nginx/
+sudo rm -r smart-farm-server
+cd ..
+sudo docker-compose up

@@ -1,4 +1,4 @@
-version: "3"
+version: "2.2"
 
 services:
     linux_server:
@@ -28,10 +28,8 @@ services:
       ports:
         - "80:80"
       volumes:
-        - /home/yui/vscode/CSF582_WebServer_Project/Nginx/view/dist:/usr/share/nginx/html
-        - /home/yui/vscode/CSF582_WebServer_Project/Nginx/nginx.conf:/etc/nginx/conf.d/default.conf
-
-
+        - ./Nginx/view/dist:/usr/share/nginx/html
+        - ./Nginx/nginx.conf:/etc/nginx/conf.d/default.conf
 
 networks:
   linux_backend:
